@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLp3T8sL7/E8T63i8Xb7w/wG/VlV4Sj4cQ+p3vE8y0lXg5n5G5B7A+t8j+s3a+B+z5x+A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -79,10 +81,10 @@
         <div class="container mx-auto px-4 md:flex items-center justify-between">
             <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
                 <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-                    Hi, I'm <span class="text-indigo-600">Your Name</span>.
+                    Hi, I'm <span class="text-indigo-600">João</span>.
                 </h1>
                 <p class="mt-4 text-lg md:text-xl text-gray-600">
-                    Hi there, I'm João, a computer engineer with professional experience in Software Engineering and Data.
+                    Hi there, I'm João, a computer engineer with 5+ years of experience in Software Engineering and Data.
                 </p>
                 <div class="mt-8 flex justify-center md:justify-start space-x-4">
                     <a href="#contact" class="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-lg hover:bg-indigo-700 transition-colors duration-300 font-medium">
@@ -107,47 +109,37 @@
             <div class="text-center">
                 <h2 class="section-title text-3xl font-bold">Skills</h2>
                 <div class="mt-12 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                    <!-- Example Skill Card (Repeat for each skill) -->
+
+                    <!-- Python Skill Card -->
                     <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300">
-                        <!-- Replace with a relevant icon (e.g., from a library like Font Awesome) -->
-                        <div class="text-indigo-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 12 1.5l-5.25 5.25m10.5 0-.974.974a1.5 1.5 0 0 1-2.122 0l-.878-.878A1.5 1.5 0 0 0 10.758 7.5H3.75v10.5h16.5V7.5h-7.008ZM12 1.5v15" />
-                            </svg>
+                        <div class="text-indigo-600 text-4xl">
+                            <i class="fa-brands fa-python"></i>
                         </div>
-                        <p class="mt-4 text-center text-gray-700 font-medium">Skill Name</p>
+                        <p class="mt-4 text-center text-gray-700 font-medium">Python</p>
                     </div>
+
+                    <!-- SQL Skill Card -->
                     <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300">
-                        <div class="text-indigo-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 0 0 9-9c0-5.83-4.7-10.53-10.5-10.53S1.5 6.17 1.5 12a9 9 0 0 0 9 9" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 0 0 9-9c0-5.83-4.7-10.53-10.5-10.53S1.5 6.17 1.5 12a9 9 0 0 0 9 9Z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z" />
-                            </svg>
+                        <div class="text-indigo-600 text-4xl">
+                            <i class="fa-solid fa-database"></i>
                         </div>
-                        <p class="mt-4 text-center text-gray-700 font-medium">Skill Name</p>
+                        <p class="mt-4 text-center text-gray-700 font-medium">SQL</p>
                     </div>
+
+                    <!-- GCP Skill Card -->
                     <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300">
-                        <div class="text-indigo-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15Z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15Z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15Z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15Z" />
-                            </svg>
+                        <div class="text-indigo-600 text-4xl">
+                            <i class="fa-solid fa-cloud"></i>
                         </div>
-                        <p class="mt-4 text-center text-gray-700 font-medium">Skill Name</p>
+                        <p class="mt-4 text-center text-gray-700 font-medium">GCP</p>
                     </div>
+
+                    <!-- Agile Skill Card -->
                     <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300">
-                        <div class="text-indigo-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.102a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-1.5 0V3.852a.75.75 0 0 1 .75-.75Zm0-2.25a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-1.5 0V1.602a.75.75 0 0 1 .75-.75Zm-5.25.75a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-1.5 0V3.852a.75.75 0 0 1 .75-.75Zm0-2.25a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-1.5 0V1.602a.75.75 0 0 1 .75-.75Zm15 0a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-1.5 0V1.602a.75.75 0 0 1 .75-.75Zm0-2.25a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-1.5 0V1.602a.75.75 0 0 1 .75-.75Zm-5.25.75a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-1.5 0V3.852a.75.75 0 0 1 .75-.75Zm0-2.25a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-1.5 0V1.602a.75.75 0 0 1 .75-.75Z" />
-                            </svg>
+                        <div class="text-indigo-600 text-4xl">
+                            <i class="fa-solid fa-sync-alt"></i>
                         </div>
-                        <p class="mt-4 text-center text-gray-700 font-medium">Skill Name</p>
+                        <p class="mt-4 text-center text-gray-700 font-medium">Agile</p>
                     </div>
                 </div>
             </div>
@@ -155,61 +147,81 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="container mx-auto px-4 py-16 md:py-24">
+    <section id="projects" class="bg-gray-100 py-16 md:py-24">
         <div class="text-center">
             <h2 class="section-title text-3xl font-bold">Projects</h2>
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Example Project Card (Repeat for each project) -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+
+                <!-- Project 1: Bank Cashflows Backend Solution -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
-                    <img src="https://placehold.co/600x400/F1F5F9/334155?text=Project+Image" alt="Project Image" class="w-full h-48 object-cover">
+                    <img src="https://placehold.co/600x400/334155/f1f5f9?text=Cashflows+Backend+Solution" alt="Backend solution project" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900">Project Name</h3>
-                        <p class="mt-2 text-gray-600">A brief description of the project, including the technologies used and your role in it. Explain what problem it solves and what you learned.</p>
-                        <div class="mt-4 flex space-x-2">
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">React</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Tailwind CSS</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Node.js</span>
+                        <h3 class="text-xl font-bold text-gray-900">Cashflows Backend Solution</h3>
+                        <p class="mt-2 text-gray-600">
+                            Maintenance and evolution of a bank's cashflows backend solution. <br>This project involved migrating the system from an on-premises Oracle database to a GCP-native infrastructure, leveraging Python, Cloud Run, Pub/Sub, and a new AlloyDB backend.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">GCP</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">SQL</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Cloud Run</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">AlloyDB</span>
                         </div>
                         <div class="mt-6">
-                            <a href="#" class="inline-block text-indigo-600 font-medium hover:underline">View Live</a>
-                            <a href="#" class="inline-block text-gray-600 font-medium hover:underline ml-4">GitHub Repo</a>
+                            <!-- Placeholder links as projects are internal -->
+                            <a href="#" class="inline-block text-gray-400 font-medium cursor-not-allowed">View Live</a>
+                            <a href="#" class="inline-block text-gray-400 font-medium ml-4 cursor-not-allowed">GitHub Repo</a>
                         </div>
                     </div>
                 </div>
-                <!-- Add more project cards here... -->
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="bg-gray-100 py-16 md:py-24">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <h2 class="section-title text-3xl font-bold">Get in Touch</h2>
-                <div class="mt-8 max-w-2xl mx-auto text-gray-700">
-                    <p>I'm always open to new opportunities and collaborations. Feel free to reach out to me via the form below or through my social links.</p>
+                <!-- Project 2: Data Warehouse & Data Lake Development -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
+                    <img src="https://placehold.co/600x400/334155/f1f5f9?text=Data+Engineering" alt="Data warehouse and data lake project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Data Warehouse & Data Lake Development</h3>
+                        <p class="mt-2 text-gray-600">
+                            Designed and developed DWs and Data Lakes on GCP. <br>This project involved creating dimensional models, using partitioning, clustering and other techniques. <br>The solution enabled efficient data management and served as a foundation for business intelligence.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">GCP</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">BigQuery</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">SQL</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Airflow</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Python</span>
+                        </div>
+                        <div class="mt-6">
+                            <!-- Placeholder links as projects are internal -->
+                            <a href="#" class="inline-block text-gray-400 font-medium cursor-not-allowed">View Live</a>
+                            <a href="#" class="inline-block text-gray-400 font-medium ml-4 cursor-not-allowed">GitHub Repo</a>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Simple "form" that uses mailto -->
-                <form id="contact-form" class="mt-8 space-y-6 max-w-2xl mx-auto">
-                    <div>
-                        <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    <div>
-                        <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    <div>
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-lg hover:bg-indigo-700 transition-colors duration-300 font-medium">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
-                <div id="status-message" class="mt-4 text-center text-sm font-medium"></div>
 
-                <div class="mt-8 flex justify-center space-x-6 text-gray-600">
+                <!-- Project 3: Google Cloud PoCs for AI/ML -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
+                    <img src="https://placehold.co/600x400/334155/f1f5f9?text=AI/ML+PoC" alt="AI/ML proof of concept project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">AI/ML PoCs with Google Cloud</h3>
+                        <p class="mt-2 text-gray-600">
+                            Developed Proof of Concepts (PoCs) using advanced Google Cloud technologies to demonstrate new capabilities. <br>This included leveraging Python-based solutions with Vertex AI's LLMs for natural language processing, Document AI for intelligent document processing, and Cloud Run for serverless deployment of these applications.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">GCP</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Vertex AI</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Document AI</span>
+                        </div>
+                        <div class="mt-6">
+                            <!-- Placeholder links as projects are internal -->
+                            <a href="#" class="inline-block text-gray-400 font-medium cursor-not-allowed">View Live</a>
+                            <a href="#" class="inline-block text-gray-400 font-medium ml-4 cursor-not-allowed">GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mt-8 flex justify-center space-x-6 text-gray-600">
                     <a href="https://linkedin.com/in/joaorsimao" target="_blank" class="hover:text-indigo-600 transition-colors duration-300">
                         <!-- LinkedIn SVG -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -222,10 +234,10 @@
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.373 3.432 9.429 8.204 10.932.75.141.98-.324.98-.696 0-.342-.01-1.242-.01-2.449-3.337.724-4.042-1.61-4.042-1.61-.542-1.373-1.325-1.744-1.325-1.744-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.838 2.809 1.305 3.491.996.107-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.383 1.237-3.221-.124-.3-.532-1.517.117-3.179 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.004-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.649 1.662.241 2.879.118 3.179.772.838 1.236 1.911 1.236 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .375.23.823.98.697 4.773-1.503 8.203-5.559 8.203-10.932-1e-15-6.627-5.373-12-12-12z"/>
                         </svg>
                     </a>
-                </div>
             </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
