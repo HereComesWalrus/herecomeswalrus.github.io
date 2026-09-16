@@ -1,291 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Simão - Professional Portfolio</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Inter Font from Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLp3T8sL7/E8T63i8Xb7w/wG/VlV4Sj4cQ+p3vE8y0lXg5n5G5B7A+t8j+s3a+B+z5x+A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .section-title {
-            position: relative;
-            display: inline-block;
-            padding-bottom: 0.5rem;
-            margin-bottom: 2rem;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 70%;
-            height: 3px;
-            background-color: #6366f1;
-            border-radius: 9999px;
-        }
-        /* Custom scrollbar for webkit browsers */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #94a3b8;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #64748b;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>João Simão — Analytics Engineer</title>
+<meta name="description" content="Analytics engineer in Lisbon. Data platforms, Google Cloud and BI for banking and enterprise clients.">
+<link rel="canonical" href="https://herecomeswalrus.github.io/">
+<meta property="og:title" content="João Simão — Analytics Engineer">
+<meta property="og:description" content="Data platforms, Google Cloud and BI for banking and enterprise clients.">
+<meta property="og:url" content="https://herecomeswalrus.github.io/">
+<meta property="og:image" content="https://herecomeswalrus.github.io/assets/portrait.jpg">
+<meta property="og:type" content="profile">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%2314213A'/><text x='16' y='23' font-size='18' font-family='Georgia,serif' fill='%23E9ECE7' text-anchor='middle'>JS</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#E9ECE7;
+    --panel:#F7F8F5;
+    --ink:#14213A;
+    --ink-soft:#4C5670;
+    --rule:#C9CFC7;
+    --accent:#2440B5;
+    --live:#B8790B;
+    --measure:68ch;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+    font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(36,64,181,.3)}
+  a:hover{border-bottom-color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+  h1,h2,h3{font-family:"Bricolage Grotesque",Georgia,serif;font-weight:600;margin:0;line-height:1.05}
+  .skip{position:absolute;left:-9999px}
+  .skip:focus{left:16px;top:12px;background:var(--ink);color:var(--paper);padding:8px 14px;border:0;z-index:10}
+
+  .shell{max-width:1180px;margin:0 auto;padding:0 24px}
+  @media(min-width:1000px){.shell{display:grid;grid-template-columns:300px 1fr;gap:72px;padding:0 40px}}
+
+  /* ---------- left rail ---------- */
+  .rail{padding:44px 0 26px}
+  @media(min-width:1000px){.rail{position:sticky;top:0;height:100vh;padding:64px 0 40px;display:flex;flex-direction:column;overflow-y:auto}}
+  .portrait{width:84px;height:84px;border-radius:50%;object-fit:cover;display:block;margin-bottom:22px}
+  .name{font-size:clamp(2.6rem,7vw,3.35rem);letter-spacing:-.025em;font-weight:800}
+  .rule{height:3px;background:var(--ink);width:64px;margin:14px 0}
+  .role{font-size:1.02rem;color:var(--ink-soft);max-width:32ch;margin:0}
+  .cv{display:inline-block;margin-top:22px;background:var(--ink);color:var(--paper);border:0;padding:9px 16px;border-radius:2px;font-size:.92rem;font-weight:500}
+  .cv:hover{background:var(--accent);color:#fff}
+  .contact{margin-top:22px;font-size:.93rem;display:grid;gap:7px}
+  .contact span{color:var(--ink-soft)}
+  nav{margin-top:auto;padding-top:32px;display:none}
+  @media(min-width:1000px){nav{display:block}}
+  nav ol{list-style:none;margin:0;padding:0;font-size:.9rem;display:grid;gap:9px}
+  nav a{color:var(--ink-soft);border:0}
+  nav a:hover{color:var(--ink)}
+  nav a[aria-current="true"]{color:var(--ink);font-weight:600}
+
+  /* ---------- main ---------- */
+  main{padding-bottom:72px}
+  @media(min-width:1000px){main{padding-top:64px}}
+  section{margin-bottom:60px;scroll-margin-top:24px}
+  .sec-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 14px;margin-bottom:8px}
+  .sec-head h2{font-size:1.5rem;letter-spacing:-.01em}
+  .lede{color:var(--ink-soft);max-width:var(--measure);margin:0 0 24px}
+  .live{display:inline-flex;align-items:center;gap:7px;font-size:.85rem;color:var(--live);font-weight:500}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--live)}
+
+  .work{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+  @media(min-width:680px){.work{grid-template-columns:1fr 1fr}}
+  .item{background:var(--panel);padding:20px 22px 22px}
+  .item h3{font-size:1.06rem;margin-bottom:6px}
+  .item p{margin:0;font-size:.94rem;color:var(--ink-soft)}
+  .tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
+  .tags b{font-weight:500;font-size:.76rem;color:var(--ink);background:rgba(36,64,181,.09);padding:2px 7px;border-radius:2px}
+
+  .job{position:relative;padding:0 0 28px 26px;border-left:2px solid var(--rule)}
+  .job:last-child{border-left-color:transparent;padding-bottom:0}
+  .job::before{content:"";position:absolute;left:-6px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--paper);border:2px solid var(--ink)}
+  .job.now::before{background:var(--live);border-color:var(--live)}
+  .job h3{font-size:1.12rem}
+  .meta{font-size:.87rem;color:var(--ink-soft);margin:3px 0 10px}
+  .job ul{margin:0;padding-left:18px;font-size:.94rem;color:var(--ink-soft);max-width:var(--measure)}
+  .job li{margin-bottom:5px}
+
+  .kit{display:grid;gap:24px}
+  @media(min-width:680px){.kit{grid-template-columns:1fr 1fr}}
+  .kit h3{font-size:.98rem;margin-bottom:8px}
+  .kit p{margin:0;font-size:.94rem;color:var(--ink-soft)}
+
+  .cert{border-left:2px solid var(--live);padding-left:16px;margin-bottom:20px}
+  .cert strong{display:block}
+  .cert span{font-size:.88rem;color:var(--ink-soft)}
+  .edu{border-top:1px solid var(--rule)}
+  .edu ul{margin:0;padding:0}
+  .edu li{list-style:none;display:grid;gap:2px;padding:13px 0;border-bottom:1px solid var(--rule)}
+  @media(min-width:680px){.edu li{grid-template-columns:1fr 250px;align-items:baseline;gap:20px}}
+  .edu span{font-size:.88rem;color:var(--ink-soft)}
+
+  footer{border-top:1px solid var(--rule);padding:24px 0 0;font-size:.9rem;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline}
+  footer .note{margin-left:auto}
+
+  @media print{
+    :root{--paper:#fff;--panel:#fff}
+    nav,.portrait,.cv{display:none}
+    body{font-size:10.5pt}
+    .shell{display:block;max-width:none;padding:0}
+    .rail{height:auto;position:static;padding:0 0 16px}
+    section{margin-bottom:20px;page-break-inside:avoid}
+    a{color:inherit;border:0}
+  }
+</style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
 
-    <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-white shadow-lg p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#home" class="text-xl font-bold text-indigo-600">João Simão</a>
-            <div class="space-x-4 hidden md:block">
-                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">About</a>
-                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Skills</a>
-                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Projects</a>
-                <a href="#contact" class="text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg shadow-md transition-colors duration-300">Contact</a>
-            </div>
-            <button id="menu-button" class="md:hidden text-gray-600 hover:text-indigo-600">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-            </button>
-        </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden mt-4 text-center">
-            <a href="#about" class="block py-2 text-gray-600 hover:text-indigo-600 transition-colors duration-300">About</a>
-            <a href="#skills" class="block py-2 text-gray-600 hover:text-indigo-600 transition-colors duration-300">Skills</a>
-            <a href="#projects" class="block py-2 text-gray-600 hover:text-indigo-600 transition-colors duration-300">Projects</a>
-            <a href="#contact" class="block py-2 text-white bg-indigo-600 hover:bg-indigo-700 mx-4 mt-2 rounded-lg shadow-md transition-colors duration-300">Contact</a>
-        </div>
+  <header class="rail">
+    <img class="portrait" src="assets/portrait.jpg" alt="João Simão" width="84" height="84">
+    <h1 class="name">João<br>Simão</h1>
+    <div class="rule"></div>
+    <p class="role">Analytics engineer. I build and keep alive the data platforms enterprises run on.</p>
+    <a class="cv" href="assets/cv_2026.pdf">Download CV (PDF)</a>
+    <div class="contact">
+      <a href="mailto:jrsartss@gmail.com">jrsartss@gmail.com</a>
+      <a href="https://www.linkedin.com/in/joaorsimao">linkedin.com/in/joaorsimao</a>
+      <a href="https://github.com/HereComesWalrus">github.com/HereComesWalrus</a>
+      <a href="tel:+351960087141">+351 960 087 141</a>
+      <span>Lisbon, Portugal</span>
+    </div>
+    <nav aria-label="Sections">
+      <ol>
+        <li><a href="#now">Current work</a></li>
+        <li><a href="#track">Track record</a></li>
+        <li><a href="#toolkit">Toolkit</a></li>
+        <li><a href="#education">Education &amp; certification</a></li>
+      </ol>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <header id="home" class="relative bg-gray-100 py-20 md:py-32">
-        <div class="container mx-auto px-4 md:flex items-center justify-between">
-            <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
-                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-                    Hi, I'm <span class="text-indigo-600">João</span>.
-                </h1>
-                <p class="mt-4 text-lg md:text-xl text-gray-600">
-                    A computer engineer with 5+ years of experience in Software Engineering, Data and AI.
-                </p>
-                <div class="mt-8 flex justify-center md:justify-start space-x-4">
-                    <a href="#contact" class="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-lg hover:bg-indigo-700 transition-colors duration-300 font-medium">
-                        Get in Touch
-                    </a>
-                    <a href="assets/cv_2025.pdf" download class="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-100 transition-colors duration-300 font-medium">
-                        Download CV
-                    </a>
-                </div>
-            </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl transition-transform transform hover:scale-105 duration-300">
-                    <img src="assets/cv.jpg" alt="João Simão" class="w-full h-full object-cover">
-                </div>
-            </div>
-        </div>
-    </header>
+  <main id="main">
+    <section id="now">
+      <div class="sec-head">
+        <h2>Current work</h2>
+        <span class="live"><span class="dot"></span>Senior consultant at Timestamp:BIW, since March 2024</span>
+      </div>
+      <p class="lede">Delivering for banking and enterprise clients across Google Cloud, Oracle and the BI layer on top — usually on systems that already have users depending on them. The work is client-internal, so there's no public repo; here's what it consists of.</p>
 
-    <!-- Skills Section -->
-    <section id="skills" class="container mx-auto px-4 py-16 md:py-24">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <h2 class="section-title text-3xl font-bold">Skills</h2>
-                <div class="mt-12 flex flex-wrap justify-center gap-8">
+      <div class="work">
+        <article class="item">
+          <h3>Tableau Cloud from scratch</h3>
+          <p>Set up the client's Tableau Cloud site end to end — project structure, security model, data connections and the workflows teams follow, based on Tableau Blueprint. Moved the existing report estate over from SAP BusinessObjects.</p>
+          <div class="tags"><b>Tableau Cloud</b><b>SAP BO</b><b>Governance</b></div>
+        </article>
 
-                    <!-- Python Skill Card -->
-                    <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 w-40 h-40">
-                        <div class="text-indigo-600 text-4xl">
-                            <i class="fa-brands fa-python"></i>
-                        </div>
-                        <p class="mt-4 text-center text-gray-700 font-medium">Python</p>
-                    </div>
+        <article class="item">
+          <h3>A bank's critical daily process</h3>
+          <p>Own the maintenance and evolution of a process the bank can't run without. I gather the requirements, build the backend, and steer the frontend work on Oracle EPM.</p>
+          <div class="tags"><b>Python</b><b>Cloud Run</b><b>Pub/Sub</b><b>AlloyDB</b><b>Oracle EPM</b></div>
+        </article>
 
-                    <!-- SQL Skill Card -->
-                    <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 w-40 h-40">
-                        <div class="text-indigo-600 text-4xl">
-                            <i class="fa-solid fa-database"></i>
-                        </div>
-                        <p class="mt-4 text-center text-gray-700 font-medium">SQL</p>
-                    </div>
+        <article class="item">
+          <h3>Proofs of concept on GCP</h3>
+          <p>Prototypes that show clients what's actually feasible before they commit: document extraction, LLM-backed workflows and serverless data services.</p>
+          <div class="tags"><b>BigQuery</b><b>Vertex AI</b><b>Document AI</b><b>Cloud Run</b></div>
+        </article>
 
-                    <!-- GCP Skill Card -->
-                    <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 w-40 h-40">
-                        <div class="text-indigo-600 text-4xl">
-                            <i class="fa-solid fa-cloud"></i>
-                        </div>
-                        <p class="mt-4 text-center text-gray-700 font-medium">GCP</p>
-                    </div>
+        <article class="item">
+          <h3>CI/CD migration</h3>
+          <p>Moved critical repositories and their pipelines off GitLab and Jenkins onto GitHub Actions, without stopping delivery.</p>
+          <div class="tags"><b>GitHub Actions</b><b>Jenkins</b><b>GitLab</b></div>
+        </article>
 
-                    <!-- Agile Skill Card -->
-                    <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300 w-40 h-40">
-                        <div class="text-indigo-600 text-4xl">
-                            <i class="fa-solid fa-sync-alt"></i>
-                        </div>
-                        <p class="mt-4 text-center text-gray-700 font-medium">Agile</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <article class="item">
+          <h3>Single sign-on across apps</h3>
+          <p>Wired Microsoft Entra ID authentication and role management into several internal web applications, so access follows the company directory instead of local user tables.</p>
+          <div class="tags"><b>Entra ID</b><b>Role management</b></div>
+        </article>
+
+        <article class="item">
+          <h3>Oracle ADB on Google Cloud</h3>
+          <p>Connected Oracle Autonomous Database running in Google Cloud to the surrounding GCP services, so Oracle data and cloud-native services work as one stack.</p>
+          <div class="tags"><b>Oracle ADB</b><b>Cloud Run</b><b>Cloud Storage</b><b>BigQuery</b></div>
+        </article>
+
+        <article class="item">
+          <h3>Productivity apps, built with AI</h3>
+          <p>Small internal tools built end to end with Claude Code — a fast way to turn a recurring manual task into something the team just uses.</p>
+          <div class="tags"><b>Claude Code</b><b>Python</b></div>
+        </article>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="bg-gray-100 py-16 md:py-24">
-        <div class="text-center">
-            <h2 class="section-title text-3xl font-bold">Projects</h2>
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+    <section id="track">
+      <div class="sec-head"><h2>Track record</h2></div>
 
-                <!-- Project 1: Bank Cashflows Backend Solution -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
-                    <img src="https://placehold.co/600x400/334155/f1f5f9?text=Cashflows+Backend+Solution" alt="Backend solution project" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900">Cashflows Backend Solution</h3>
-                        <p class="mt-2 text-gray-600">
-                            Maintenance and evolution of a bank's cashflows backend solution. <br>This project involved migrating the system from an on-premises Oracle database to a GCP-native infrastructure, leveraging Python, Cloud Run, Pub/Sub, and a new AlloyDB backend.
-                        </p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Python</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">GCP</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">SQL</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Cloud Run</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">AlloyDB</span>
-                        </div>
-                        <div class="mt-6">
-                            <!-- Placeholder links as projects are internal -->
-                            <a href="#" class="inline-block text-gray-400 font-medium cursor-not-allowed">View Live</a>
-                            <a href="#" class="inline-block text-gray-400 font-medium ml-4 cursor-not-allowed">GitHub Repo</a>
-                        </div>
-                    </div>
-                </div>
+      <article class="job now">
+        <h3>Analytics Engineer — Senior Consultant</h3>
+        <p class="meta">Timestamp:BIW · Mar 2024 – present · Lisbon</p>
+        <ul><li>See current work above.</li></ul>
+      </article>
 
-                <!-- Project 2: Data Warehouse & Data Lake Development -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
-                    <img src="https://placehold.co/600x400/334155/f1f5f9?text=Data+Engineering" alt="Data warehouse and data lake project" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900">Data Warehouse & Data Lake Development</h3>
-                        <p class="mt-2 text-gray-600">
-                            Designed and developed DWs and Data Lakes on GCP. <br>This project involved creating dimensional models, using partitioning, clustering and other techniques. <br>The solution enabled efficient data management and served as a foundation for business intelligence.
-                        </p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">GCP</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">BigQuery</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">SQL</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Airflow</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Python</span>
-                        </div>
-                        <div class="mt-6">
-                            <!-- Placeholder links as projects are internal -->
-                            <a href="#" class="inline-block text-gray-400 font-medium cursor-not-allowed">View Live</a>
-                            <a href="#" class="inline-block text-gray-400 font-medium ml-4 cursor-not-allowed">GitHub Repo</a>
-                        </div>
-                    </div>
-                </div>
+      <article class="job">
+        <h3>Analytics Engineer — Consultant</h3>
+        <p class="meta">Timestamp:BIW · Mar 2021 – Mar 2024 · Lisbon</p>
+        <ul>
+          <li>Built data warehouses and data lakes on BigQuery, Cloud Storage and Airflow — dimensional modelling, partitioning, extraction from REST APIs.</li>
+          <li>Migrated a bank's cashflows backend from on-premise Python and Oracle to a serverless GCP stack, then ran it in production.</li>
+          <li>Delivered Looker Studio reporting on top of BigQuery.</li>
+          <li>Maintained and extended an on-premise financial consolidation app in Oracle APEX and PL/SQL.</li>
+        </ul>
+      </article>
 
-                <!-- Project 3: Google Cloud PoCs for AI/ML -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
-                    <img src="https://placehold.co/600x400/334155/f1f5f9?text=AI/ML+PoC" alt="AI/ML proof of concept project" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900">AI/ML PoCs with Google Cloud</h3>
-                        <p class="mt-2 text-gray-600">
-                            Developed Proof of Concepts (PoCs) using advanced Google Cloud technologies to demonstrate new capabilities. <br>This included leveraging Python-based solutions with Vertex AI's LLMs for natural language processing, Document AI for intelligent document processing, and Cloud Run for serverless deployment of these applications.
-                        </p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">GCP</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Python</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Vertex AI</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Document AI</span>
-                        </div>
-                        <div class="mt-6">
-                            <!-- Placeholder links as projects are internal -->
-                            <a href="#" class="inline-block text-gray-400 font-medium cursor-not-allowed">View Live</a>
-                            <a href="#" class="inline-block text-gray-400 font-medium ml-4 cursor-not-allowed">GitHub Repo</a>
-                        </div>
-                    </div>
-                </div>
+      <article class="job">
+        <h3>Software Engineer — Trainee Consultant</h3>
+        <p class="meta">Timestamp:BIW · Mar 2020 – Mar 2021 · Lisbon</p>
+        <ul><li>Full-stack development of a data governance application (Django, JavaScript, Bootstrap, SigmaJS).</li></ul>
+      </article>
 
-            </div>
-            <div class="mt-8 flex justify-center space-x-6 text-gray-600">
-                    <a href="https://linkedin.com/in/joaorsimao" target="_blank" class="hover:text-indigo-600 transition-colors duration-300">
-                        <!-- LinkedIn SVG -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                    </a>
-                    <a href="https://github.com/herecomeswalrus" target="_blank" class="hover:text-indigo-600 transition-colors duration-300">
-                        <!-- GitHub SVG -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.373 3.432 9.429 8.204 10.932.75.141.98-.324.98-.696 0-.342-.01-1.242-.01-2.449-3.337.724-4.042-1.61-4.042-1.61-.542-1.373-1.325-1.744-1.325-1.744-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.838 2.809 1.305 3.491.996.107-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.383 1.237-3.221-.124-.3-.532-1.517.117-3.179 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.004-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.649 1.662.241 2.879.118 3.179.772.838 1.236 1.911 1.236 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .375.23.823.98.697 4.773-1.503 8.203-5.559 8.203-10.932-1e-15-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-            </div>
-        </div>
+      <article class="job">
+        <h3>Researcher — M.S. thesis</h3>
+        <p class="meta">INESC-ID · Sep 2018 – 2019 · Lisbon</p>
+        <ul><li>Sentiment analysis and complex-network algorithms in Python (Airflow, VADER, NLTK, NetworkX).</li></ul>
+      </article>
     </section>
 
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto text-center px-4">
-            <p>&copy; <span id="current-year"></span> João Simão. All Rights Reserved.</p>
+    <section id="toolkit">
+      <div class="sec-head"><h2>Toolkit</h2></div>
+      <div class="kit">
+        <div>
+          <h3>Cloud &amp; data platform</h3>
+          <p>Google Cloud Platform, BigQuery, Cloud Run, Pub/Sub, AlloyDB, Cloud Storage, Airflow, Oracle ADB, OCI</p>
         </div>
+        <div>
+          <h3>Build</h3>
+          <p>Python, SQL, PL/SQL, Bash, Django, Oracle APEX, Git, GitHub Actions, UNIX, networking</p>
+        </div>
+        <div>
+          <h3>Analytics &amp; BI</h3>
+          <p>Tableau Cloud, Looker Studio, SAP BusinessObjects, dimensional modelling, Excel</p>
+        </div>
+        <div>
+          <h3>Working with teams</h3>
+          <p>Jira, Confluence, Claude Code. Portuguese (native), English, Spanish.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="sec-head"><h2>Education &amp; certification</h2></div>
+
+      <div class="cert">
+        <strong>Google Cloud Professional Data Engineer</strong>
+        <span>Certified Aug 2022, recertified Dec 2024 — valid to Dec 2027</span>
+      </div>
+
+      <div class="edu">
+        <ul>
+          <li><strong>M.S. Computer Science and Engineering</strong><span>Instituto Superior Técnico, Universidade de Lisboa · from Sept 2017, thesis pending</span></li>
+          <li><strong>Erasmus+ exchange</strong><span>AGH University of Science and Technology, Kraków · Feb – Jul 2018</span></li>
+          <li><strong>B.S. Computer Science and Engineering</strong><span>Instituto Superior Técnico, Universidade de Lisboa · Sept 2014 – Jun 2017</span></li>
+          <li><strong>SQL Server Integration Services: an introduction</strong><span>Udemy · Dec 2020</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <a href="mailto:jrsartss@gmail.com">jrsartss@gmail.com</a>
+      <a href="https://www.linkedin.com/in/joaorsimao">LinkedIn</a>
+      <a href="https://github.com/HereComesWalrus">GitHub</a>
+      <span class="note">Last updated September 2026</span>
     </footer>
+  </main>
+</div>
 
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        const menuButton = document.getElementById('menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Simple form handling (sends to a mailto: link)
-        const contactForm = document.getElementById('contact-form');
-        const statusMessage = document.getElementById('status-message');
-
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            if (!name || !email || !message) {
-                statusMessage.textContent = 'Please fill out all fields.';
-                statusMessage.className = 'mt-4 text-center text-red-500 font-medium';
-                return;
-            }
-
-            const subject = `Message from your portfolio page from ${name}`;
-            const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-            const mailtoLink = `mailto:jrsartss@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            
-            // Open the mail client
-            window.location.href = mailtoLink;
-
-            // Display a message to the user
-            statusMessage.textContent = 'Thank you! Your email client should open shortly.';
-            statusMessage.className = 'mt-4 text-center text-green-600 font-medium';
-            contactForm.reset();
-        });
-
-    </script>
+<script>
+  // Highlight the section currently in view in the side nav.
+  var links = Array.prototype.slice.call(document.querySelectorAll('nav a'));
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          links.forEach(function (a) { a.removeAttribute('aria-current'); });
+          map[e.target.id].setAttribute('aria-current', 'true');
+        }
+      });
+    }, { rootMargin: '-10% 0px -70% 0px' });
+    Object.keys(map).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) obs.observe(el);
+    });
+  }
+</script>
 </body>
 </html>

@@ -1,2 +1,12 @@
 # herecomeswalrus.github.io
-Personal Page
+
+Personal page / CV. Plain HTML + CSS, no framework, no build step.
+
+```
+index.html            the whole page (content in the markup, design tokens in :root)
+assets/portrait.jpg   square photo, 420px — swap with any square image of the same name
+assets/cv_2026.pdf    the PDF the "Download CV" button serves
+```
+
+Edit `index.html` and push to `main`; GitHub Pages redeploys in about a minute.
+Ctrl/Cmd+P prints a clean one-pager.
